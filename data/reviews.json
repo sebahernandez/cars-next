@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Excelente servicio",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "author": "Juan Pérez"
+  },
+  {
+    "title": "Muy buenos productos",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "author": "María López"
+  },
+  {
+    "title": "Recomendado",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "author": "Carlos Gómez"
+  }
+]
