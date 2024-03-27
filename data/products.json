@@ -8,6 +8,11 @@
     "fuelType": "Bencina",
     "transmission": "Manual",
     "imageUrl": "/img/nissan.jpeg",
+    "imageGallery": [
+      { "imageUrl": "/img/nissan.jpeg" },
+      { "imageUrl": "/img/chevrolet.jpeg" },
+      { "imageUrl": "/img/honda.jpeg" }
+    ],
     "available": true,
     "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más."
   },
