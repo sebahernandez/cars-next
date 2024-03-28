@@ -1,19 +1,27 @@
 "use client";
 
-import React from "react";
+import { useState } from "react";
 import products from "@/data/products.json";
 import Image from "next/image";
 import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import {
+  Autoplay,
+  FreeMode,
+  Navigation,
+  Pagination,
+  Thumbs,
+} from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const pageCars = ({ params }) => {
+const PageCars = ({ params }) => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
   const producto = products.find(
     (itemProduct) => itemProduct.id === Number(params.id)
   );
@@ -28,11 +36,15 @@ const pageCars = ({ params }) => {
         <div className="col-span-2 row-span-3">
           <Swiper
             navigation
-            pagination={{ type: "fraction" }}
-            modules={[Navigation, Pagination, Autoplay]}
+            /*  pagination={{ type: "fraction" }} */
+            modules={[Navigation, Pagination, Autoplay, FreeMode, Thumbs]}
             className="h-96 w-full rounded-lg"
             loop={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
+            thumbs={{
+              swiper:
+                thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+            }}
           >
             {producto.imageGallery.map((image, index) => (
               <SwiperSlide key={index}>
@@ -45,6 +57,32 @@ const pageCars = ({ params }) => {
                     height={500}
                   />
                 </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Thumbnail */}
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            loop={true}
+            spaceBetween={12}
+            slidesPerView={4}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="thumbs mt-3 h-32 w-full rounded-lg"
+          >
+            {producto.imageGallery.map((image, index) => (
+              <SwiperSlide key={index}>
+                <button className="flex h-full w-full items-center justify-center">
+                  <Image
+                    src={image.imageUrl}
+                    alt={image.name}
+                    className="block h-full w-full object-cover"
+                    width={500}
+                    height={500}
+                  />
+                </button>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -106,4 +144,4 @@ const pageCars = ({ params }) => {
   );
 };
 
-export default pageCars;
+export default PageCars;
