@@ -1,12 +1,7 @@
 import React from "react";
 import Image from "next/image";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelopeCircleCheck,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
-
+import { Call } from "iconic-react";
+import { Sms } from "iconic-react";
 const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white">
@@ -25,19 +20,17 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <div
                 className="bg-cyan-200 rounded-full p-4 mb-4 flex items-center justify-center"
-                style={{ width: "40px", height: "40px", margin: "auto" }}
+                style={{ margin: "auto" }}
               >
-                <FontAwesomeIcon
-                  icon={faPhone}
-                  style={{ width: "50px", color: "black" }}
-                />
+                <Call size="24" color="#000000" />
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-white">
-                  Llámanos ahora
-                </p>
-                <a href="tel:+990737621432" className="text-2xl text-cyan-300">
+                <p className="text-sm font-semibold text-white">Llámanos al:</p>
+                <a
+                  href="tel:+990737621432"
+                  className="text-sm md:text-2xl text-cyan-300"
+                >
                   +990-737 621 432
                 </a>
               </div>
@@ -46,19 +39,23 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <div
                 className="bg-cyan-200 rounded-full p-4 mb-4 flex items-center justify-center"
-                style={{ width: "40px", height: "40px", margin: "auto" }}
+                style={{ margin: "auto" }}
               >
-                <FontAwesomeIcon
-                  icon={faEnvelopeCircleCheck}
-                  style={{ width: "50px", color: "black" }}
+                <Sms
+                  size="24"
+                  color="#000000"
+                  // Mohamed wish you a good day
                 />
               </div>
 
               <div>
                 <p className="text-sm font-semibold text-white">
-                  Envianos un email a
+                  Correo electrónico
                 </p>
-                <a href="tel:+990737621432" className="text-2xl text-cyan-300">
+                <a
+                  href="tel:+990737621432"
+                  className="text-sm md:text-2xl text-cyan-300"
+                >
                   ventas@buycars.cl
                 </a>
               </div>

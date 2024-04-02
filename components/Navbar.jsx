@@ -2,16 +2,15 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { Call, Instagram, Facebook } from "iconic-react";
+import Link from "next/link";
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <>
-      <div className="bg-white shadow-md fixed w-full z-10 top-0">
+      <div className="bg-slate-900 shadow-md fixed w-full z-10 top-0">
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
             <div className="flex space-x-7">
@@ -19,59 +18,74 @@ export const Navbar = () => {
                 <a href="/" className="flex items-center py-4 px-2">
                   <span className="font-semibold text-gray-500 text-lg">
                     <Image
-                      src="/img/buycars-logo.webp"
-                      width={50}
-                      height={50}
+                      src="/img/logo-buy-cars.webp"
+                      width={105}
+                      height={100}
                       alt="Buycars"
                       className="logo"
+                      loading="lazy"
                     />
                   </span>
                 </a>
               </div>
 
               <div className="hidden md:flex items-center space-x-1">
-                <a
-                  href="#"
-                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                <Link
+                  href="/"
+                  className="py-4 px-2 text-white font-semibold hover:text-slate-900 transition duration-300"
                 >
-                  INICIO
-                </a>
-                <a
-                  href="#"
-                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                  Inicio
+                </Link>
+                <Link
+                  href="/stock"
+                  className="py-4 px-2 text-white font-semibold hover:text-slate-900 transition duration-300"
                 >
-                  STOCK
-                </a>
-                <a
-                  href="#"
-                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                  Stock
+                </Link>
+                <Link
+                  href="/nosotros"
+                  className="py-4 px-2 text-white font-semibold hover:text-slate-900 transition duration-300"
                 >
-                  NOSOTROS
-                </a>
-                <a
-                  href="#"
-                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                  Nosotros
+                </Link>
+                <Link
+                  href="/contacto"
+                  className="py-4 px-2 text-white font-semibold hover:text-slate-900 transition duration-300"
                 >
-                  CONTACTO
-                </a>
+                  Contacto
+                </Link>
               </div>
             </div>
             <div className="flex items-center space-x-2">
               <div
-                className="bg-cyan-200 rounded-full p-4 mb-4 flex items-center justify-center"
-                style={{ width: "40px", height: "40px", margin: "auto" }}
+                className="bg-cyan-200 rounded-full p-2 mb-2 flex items-center justify-center"
+                style={{ margin: "auto", marginRight: "10px" }}
               >
-                <FontAwesomeIcon
-                  icon={faPhone}
-                  style={{ width: "50px", color: "black" }}
-                />
+                <Facebook size="24" color="#000000" />
+              </div>
+
+              <div
+                className="bg-cyan-200 rounded-full p-2 mb-2 flex items-center justify-center"
+                style={{ margin: "auto", marginRight: "10px" }}
+              >
+                <Instagram size="24" color="#000000" />
+              </div>
+
+              <div
+                className="bg-cyan-200 rounded-full p-2 mb-2 flex items-center justify-center"
+                style={{ margin: "auto" }}
+              >
+                <Call size="24" color="#000000" />
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-gray-700">
+                <p className="text-sm font-semibold text-white">
                   Llámanos ahora
                 </p>
-                <a href="tel:+990737621432" className="text-sm text-gray-600">
+                <a
+                  href="tel:+990737621432"
+                  className=" text-white font-bold text-sm md:text-xl"
+                >
                   +990-737 621 432
                 </a>
               </div>
@@ -101,7 +115,7 @@ export const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block text-sm px-2 py-4 text-gray-500 hover:bg-green-500 transition duration-300"
+                className="block text-sm px-2 py-4 text-white hover:bg-green-500 transition duration-300"
               >
                 Inicio
               </a>
@@ -109,7 +123,7 @@ export const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block text-sm px-2 py-4 text-gray-500 hover:bg-green-500 transition duration-300"
+                className="block text-sm px-2 py-4 text-white hover:bg-green-500 transition duration-300"
               >
                 Stock
               </a>
@@ -117,7 +131,7 @@ export const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block text-sm px-2 py-4 text-gray-500 hover:bg-green-500 transition duration-300"
+                className="block text-sm px-2 py-4 text-white hover:bg-green-500 transition duration-300"
               >
                 Nosotros
               </a>
@@ -125,7 +139,7 @@ export const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block text-sm px-2 py-4 text-gray-500 hover:bg-green-500 transition duration-300"
+                className="block text-sm px-2 py-4 text-white hover:bg-green-500 transition duration-300"
               >
                 Contacto
               </a>

@@ -1,6 +1,4 @@
 import { Inter } from "next/font/google";
-import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false;
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -9,7 +7,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "BuyCar",
+  title:
+    "Buycar - Especialistas en gestión de Ventas, Consignación y Compra de vehículos.",
   description:
     "Especialistas en gestión de Ventas, Consignación y Compra de vehículos.",
 };

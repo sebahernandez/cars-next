@@ -37,7 +37,7 @@ export default function Slider() {
   }, [activeIndex, nextSlide]);
 
   return (
-    <div className="container mx-auto mt-36">
+    <div className="md:container md:mx-auto mt-36 mx-[20px]">
       <div
         id="animation-carousel"
         className="relative w-full"

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Nissan",
-    "price": "$7,656.00",
+    "price": "4.656.000",
     "location": "Santiago",
     "miles": "250",
     "fuelType": "Bencina",
@@ -14,67 +14,98 @@
       { "imageUrl": "/img/honda.jpeg" }
     ],
     "available": true,
-    "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más."
+    "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más.",
+    "brand": "Nissan"
   },
 
   {
     "id": 2,
     "name": "Hyundai",
-    "price": "$7,656.00",
+    "price": "6.656.000",
     "location": "Providencia",
     "miles": "250",
     "fuelType": "Bencina",
     "transmission": "Manual",
     "imageUrl": "/img/hyundai.jpeg",
+    "imageGallery": [
+      { "imageUrl": "/img/hyundai.jpeg" },
+      { "imageUrl": "/img/chevrolet.jpeg" },
+      { "imageUrl": "/img/honda.jpeg" }
+    ],
     "available": true,
-    "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más."
+    "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más.",
+    "brand": "Hyundai"
   },
   {
     "id": 3,
     "name": "Toyota",
-    "price": "$7,656.00",
+    "price": "2.656.000",
     "location": "La florida",
     "miles": "250",
     "fuelType": "Bencina",
     "transmission": "Manual",
     "imageUrl": "/img/toyota.jpeg",
+    "imageGallery": [
+      { "imageUrl": "/img/toyota.jpeg" },
+      { "imageUrl": "/img/chevrolet.jpeg" },
+      { "imageUrl": "/img/honda.jpeg" }
+    ],
     "available": false,
-    "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más."
+    "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más.",
+    "brand": "Toyota"
   },
   {
     "id": 4,
     "name": "Honda",
-    "price": "$7,656.00",
+    "price": "7.656.000",
     "location": "Vitacura",
     "miles": "250",
     "fuelType": "Bencina",
     "transmission": "Manual",
     "imageUrl": "/img/honda.jpeg",
+    "imageGallery": [
+      { "imageUrl": "/img/honda.jpeg" },
+      { "imageUrl": "/img/chevrolet.jpeg" },
+      { "imageUrl": "/img/honda.jpeg" }
+    ],
     "available": false,
-    "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más."
+    "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más.",
+    "brand": "Honda"
   },
   {
     "id": 5,
     "name": "Chevrolet",
-    "price": "$7,656.00",
+    "price": "8.656.000",
     "location": "La Dehesa",
     "miles": "250",
     "fuelType": "Bencina",
     "transmission": "Manual",
     "imageUrl": "/img/chevrolet.jpeg",
+    "imageGallery": [
+      { "imageUrl": "/img/chevrolet.jpeg" },
+      { "imageUrl": "/img/chevrolet.jpeg" },
+      { "imageUrl": "/img/honda.jpeg" }
+    ],
     "available": true,
-    "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más."
+    "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más.",
+    "brand": "Chevrolet"
   },
   {
     "id": 6,
     "name": "Ford",
-    "price": "$7,656.00",
+    "price": "9.656.000",
     "location": "La Dehesa",
     "miles": "250",
     "fuelType": "Bencina",
     "transmission": "Manual",
     "imageUrl": "/img/ford.jpeg",
+    "imageGallery": [
+      { "imageUrl": "/img/ford.jpeg" },
+      { "imageUrl": "/img/chevrolet.jpeg" },
+      { "imageUrl": "/img/honda.jpeg" }
+    ],
     "available": true,
-    "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más."
+    "description": "Este es el primer párrafo de la descripción del vehículo Nissan.\n\nEste sería el segundo párrafo, que proporciona más detalles sobre el vehículo, como sus características únicas, historia de mantenimiento o cualquier otra información relevante.\n\nY aquí tendríamos un tercer párrafo que podría incluir información adicional como opciones de financiamiento, detalles de contacto para consultas, y más.",
+    "brand": "Ford"
   }
 ]

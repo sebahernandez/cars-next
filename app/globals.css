@@ -70,3 +70,9 @@
 .swiper-scrollbar {
   margin-top: 40px;
 }
+
+/* buttons swiper */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+}

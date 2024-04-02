@@ -20,7 +20,7 @@ const FeatureCard = ({ Icon, title, description }) => {
 
 const FeatureSection = () => {
   return (
-    <div className="container mx-auto bg-amber-50 p-12 md:p-12 rounded-xl my-28">
+    <div className="md:container md:mx-auto bg-amber-50 p-12 md:p-12 rounded-xl my-28 mx-[20px]">
       <div className="container mx-auto flex flex-col lg:flex-row items-center">
         <div className="flex-1">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800">

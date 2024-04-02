@@ -10,26 +10,37 @@ import "swiper/css/autoplay"; // Estilos para la funcionalidad de autoplay
 
 export default function BrandCarousel() {
   const brands = [
-    { name: "Brand A", logoUrl: "/img/brands/auto-fin.webp" },
-    { name: "Brand B", logoUrl: "/img/brands/banco-falabella.webp" },
-    { name: "Brand B", logoUrl: "/img/brands/bci-seguros.webp" },
-    { name: "Brand B", logoUrl: "/img/brands/club-seguro.webp" },
-    { name: "Brand B", logoUrl: "/img/brands/compara.webp" },
-    { name: "Brand B", logoUrl: "/img/brands/euro-capital.webp" },
-    { name: "Brand B", logoUrl: "/img/brands/nuevo-capital.webp" },
-    { name: "Brand B", logoUrl: "/img/brands/olx-autos.webp" },
+    { name: "autofin", logoUrl: "/img/brands/auto-fin.webp" },
+    { name: "falabella", logoUrl: "/img/brands/banco-falabella.webp" },
+    { name: "bci", logoUrl: "/img/brands/bci-seguros.webp" },
+    { name: "club-seguro", logoUrl: "/img/brands/club-seguro.webp" },
+    { name: "compara", logoUrl: "/img/brands/compara.webp" },
+    { name: "euro-capital", logoUrl: "/img/brands/euro-capital.webp" },
+    { name: "nuevo-capital", logoUrl: "/img/brands/nuevo-capital.webp" },
+    { name: "olx-autos", logoUrl: "/img/brands/olx-autos.webp" },
   ];
 
   return (
     <div className="container mx-auto mb-28">
       <Swiper
-        // Proporciona módulos adicionales aquí si es necesario
         modules={[Autoplay]}
-        spaceBetween={50} // Espacio entre slides
-        slidesPerView={4} // Número de slides a mostrar
-        autoplay={{ delay: 2500, disableOnInteraction: false }} // Configura el autoplay
-        // Añade otras configuraciones de Swiper según necesites
+        spaceBetween={50}
+        slidesPerView={4} // Valor predeterminado para desktop
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
         loop={true}
+        breakpoints={{
+          // Cuando el ancho de la ventana es >= 320px (dispositivos móviles)
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          // Cuando el ancho de la ventana es >= 768px (tablets)
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          // Puedes añadir más puntos de interrupción si lo necesitas
+        }}
       >
         {brands.map((brand) => {
           const keyBrand = uuidv4();
