@@ -32,25 +32,25 @@ export const Navbar = () => {
               <div className="hidden md:flex items-center space-x-1">
                 <Link
                   href="/"
-                  className="py-4 px-2 text-white font-semibold hover:text-slate-900 transition duration-300"
+                  className="py-4 px-2 text-white font-semibold hover:text-cyan-300 transition duration-300"
                 >
                   Inicio
                 </Link>
                 <Link
                   href="/stock"
-                  className="py-4 px-2 text-white font-semibold hover:text-slate-900 transition duration-300"
+                  className="py-4 px-2 text-white font-semibold hover:text-cyan-300 transition duration-300"
                 >
                   Stock
                 </Link>
                 <Link
                   href="/nosotros"
-                  className="py-4 px-2 text-white font-semibold hover:text-slate-900 transition duration-300"
+                  className="py-4 px-2 text-white font-semibold hover:text-cyan-300 transition duration-300"
                 >
                   Nosotros
                 </Link>
                 <Link
                   href="/contacto"
-                  className="py-4 px-2 text-white font-semibold hover:text-slate-900 transition duration-300"
+                  className="py-4 px-2 text-white font-semibold hover:text-cyan-300 transition duration-300"
                 >
                   Contacto
                 </Link>
