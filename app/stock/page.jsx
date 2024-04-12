@@ -5,14 +5,33 @@ import Car from "@/components/Car";
 import products from "@/data/products";
 
 const Page = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [sortOrder, setSortOrder] = useState("asc");
-  const [filterBrand, setFilterBrand] = useState("");
-  const [visibleCars, setVisibleCars] = useState(8);
-  const [filteredCars, setFilteredCars] = useState(products);
-
+  const [searchTerm, setSearchTerm]     = useState("");
+  const [sortOrder, setSortOrder]       = useState("asc");
+  const [filterBrand, setFilterBrand]   = useState("");
+  const [visibleCars, setVisibleCars]   = useState(8);
+  const [filteredCars, setFilteredCars] = useState([]);
+  const [stocks, setStocks] = useState([]);
   useEffect(() => {
-    let cars = products
+    const fetchData = async () => {
+      try {
+        const token = 'THOKnpRxvLcVXzuAPmKnPVPIko9s49acls#sdg$1354Gwr#%/deg476534ad35RBh9ifXqSTTREiYZ2qWLAGveKm';
+        const url   = 'https://venpu.cl/api';
+        const response = await fetch(`${url}/cars/stock`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
+      
+        const r = await response.json();
+        if(r.status) setStocks(r.data);
+        else console.log(r.error)
+      } catch (error) {
+        console.error('Error al obtener los datos de la API:', error);
+      }
+    };
+    let cars = stocks
       .filter(
         (car) =>
           car.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -34,7 +53,8 @@ const Page = () => {
 
     setFilteredCars(cars);
     setVisibleCars(8);
-  }, [searchTerm, sortOrder, filterBrand]);
+    fetchData();
+  }, [searchTerm, sortOrder, filterBrand,stocks]);
 
   const loadMoreCars = () => {
     setVisibleCars((prevVisibleCars) => prevVisibleCars + 8);

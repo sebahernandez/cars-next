@@ -1,6 +1,6 @@
 "use client";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect, useState }  from "react";
 import Car from "@/components/Car";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -16,8 +16,32 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import products from "@/data/products.json";
 
-export default function FeaturedCars() {
+function FeaturedCars({data}){
   const preloadImages = products.slice(0, 3);
+  const [destacados, setDestacados] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const token = 'THOKnpRxvLcVXzuAPmKnPVPIko9s49acls#sdg$1354Gwr#%/deg476534ad35RBh9ifXqSTTREiYZ2qWLAGveKm';
+        const url   = 'https://venpu.cl/api';
+        const response = await fetch(`${url}/cars/destacados`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
+      
+        const r = await response.json();
+        if(r.status) setDestacados(r.data);
+        else console.log(r.error)
+      } catch (error) {
+        console.error('Error al obtener los datos de la API:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <section className="my-28">
@@ -36,6 +60,7 @@ export default function FeaturedCars() {
         <h2 className="text-2xl md:text-4xl font-bold ml-2">
           Vehículos Destacados
         </h2>
+       
         <small className="text-sm md:text-xl ml-2">
           Encuentra el vehículo que buscas
         </small>
@@ -69,7 +94,7 @@ export default function FeaturedCars() {
             },
           }}
         >
-          {products.map((product) => (
+          {destacados.map((product) => (
             <SwiperSlide key={product.id}>
               <Car product={product} />
             </SwiperSlide>
@@ -79,3 +104,4 @@ export default function FeaturedCars() {
     </section>
   );
 }
+export default FeaturedCars;
