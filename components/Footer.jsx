@@ -18,10 +18,7 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-2 md:gap-8 mb-4 md:mb-0">
             <div className="flex items-center space-x-2">
-              <div
-                className="bg-cyan-200 rounded-full p-4 mb-4 flex items-center justify-center"
-                style={{ margin: "auto" }}
-              >
+              <div className="bg-cyan-200 rounded-full p-1 flex flex-col items-start justify-start md:p-4 md:mb-4 md:flex md:items-center md:justify-center">
                 <Call size="24" color="#000000" />
               </div>
 
@@ -38,7 +35,7 @@ const Footer = () => {
 
             <div className="flex items-center space-x-2">
               <div
-                className="bg-cyan-200 rounded-full p-4 mb-4 flex items-center justify-center"
+                className="bg-cyan-200 rounded-full p-1 mb-4 flex flex-col items-center justify-center md:p-4 md:mb-4 md:flex md:items-center md:justify-center"
                 style={{ margin: "auto" }}
               >
                 <Sms

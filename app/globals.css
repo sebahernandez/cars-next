@@ -76,3 +76,7 @@
 .swiper-button-next {
   color: white !important;
 }
+
+#animation-carousel {
+  width: 100%;
+}

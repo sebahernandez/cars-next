@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className="bg-slate-900 shadow-md fixed w-full z-10 top-0">
+      <div className="bg-slate-900 shadow-md fixed w-full z-10 top-0 px-2">
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
             <div className="flex space-x-7">
@@ -19,11 +19,11 @@ export const Navbar = () => {
                   <span className="font-semibold text-gray-500 text-lg">
                     <Image
                       src="/img/logo-buy-cars.webp"
-                      width={105}
-                      height={100}
+                      width={50}
+                      height={50}
                       alt="Buycars"
                       className="logo"
-                      loading="lazy"
+                      priority
                     />
                   </span>
                 </a>
@@ -58,21 +58,31 @@ export const Navbar = () => {
             </div>
             <div className="flex items-center space-x-2">
               <div
-                className="bg-cyan-200 rounded-full p-2 mb-2 flex items-center justify-center"
+                className="bg-cyan-200 rounded-full p-1 mb-2 flex items-center justify-center md:p-2"
                 style={{ margin: "auto", marginRight: "10px" }}
               >
-                <Facebook size="24" color="#000000" />
+                <Link
+                  href="https://web.facebook.com/buycars.chile?mibextid=LQQJ4d&rdid=wuIoHHMcbZcjkuew"
+                  target="_blank"
+                >
+                  <Facebook size="24" color="#000000" />{" "}
+                </Link>
               </div>
 
               <div
-                className="bg-cyan-200 rounded-full p-2 mb-2 flex items-center justify-center"
+                className="bg-cyan-200 rounded-full p-1 mb-2 flex items-center justify-center  md:p-2"
                 style={{ margin: "auto", marginRight: "10px" }}
               >
-                <Instagram size="24" color="#000000" />
+                <Link
+                  href="https://www.instagram.com/buycars.chile?igsh=cmo0NGcyenRhNmR3"
+                  target="_blank"
+                >
+                  <Instagram size="24" color="#000000" />
+                </Link>
               </div>
 
               <div
-                className="bg-cyan-200 rounded-full p-2 mb-2 flex items-center justify-center"
+                className="bg-cyan-200 rounded-full p-1 mb-2 flex items-center justify-center  md:p-2"
                 style={{ margin: "auto" }}
               >
                 <Call size="24" color="#000000" />
@@ -96,7 +106,7 @@ export const Navbar = () => {
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
                 <svg
-                  className="w-6 h-6 text-gray-500 hover:text-green-500"
+                  className="w-6 h-6 text-gray-500 hover:text-cyan-300"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -111,38 +121,38 @@ export const Navbar = () => {
           </div>
         </div>
         <div className={`${isMobileMenuOpen ? "" : "hidden"} mobile-menu`}>
-          <ul>
-            <li>
-              <a
-                href="#"
-                className="block text-sm px-2 py-4 text-white hover:bg-green-500 transition duration-300"
+          <ul className="py-2">
+            <li className="py-2 hover:bg-gray-800 hover:text-cyan-300 ">
+              <Link
+                href="/"
+                className="py-4 px-2 text-white font-semibold hover:text-cyan-300 transition duration-300"
               >
                 Inicio
-              </a>
+              </Link>
             </li>
-            <li>
-              <a
-                href="#"
-                className="block text-sm px-2 py-4 text-white hover:bg-green-500 transition duration-300"
+            <li className="py-2 hover:bg-gray-800 hover:text-cyan-300 ">
+              <Link
+                href="/stock"
+                className="py-4 px-2 text-white font-semibold hover:text-cyan-300 transition duration-300"
               >
                 Stock
-              </a>
+              </Link>
             </li>
-            <li>
-              <a
-                href="#"
-                className="block text-sm px-2 py-4 text-white hover:bg-green-500 transition duration-300"
+            <li className="py-2 hover:bg-gray-800 hover:text-cyan-300 ">
+              <Link
+                href="/nosotros"
+                className="py-4 px-2 text-white font-semibold hover:text-cyan-300 transition duration-300"
               >
                 Nosotros
-              </a>
+              </Link>
             </li>
-            <li>
-              <a
-                href="#"
-                className="block text-sm px-2 py-4 text-white hover:bg-green-500 transition duration-300"
+            <li className="py-2 hover:bg-gray-800 hover:text-cyan-300 ">
+              <Link
+                href="/contacto"
+                className="py-4 px-2 text-white font-semibold hover:text-cyan-300 transition duration-300"
               >
                 Contacto
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

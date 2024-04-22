@@ -21,62 +21,43 @@ const TestimonialSwiper = () => {
   const testimonials = [
     {
       id: 1,
-      name: "John Doe",
-      testimonial: `Gracias por la atención,
-    responsabilidad y
-    transparencia, los recomiendo
-    100%, no sabía por qué vehículo
-    y el tipo de financiamiento, me
-    explicaron en detalle de todo el
-    proceso, lo que me ayudó a
-    tomar una decisión informada`,
+      name: "Cristóbal Martínez",
+      testimonial: `Excelente servicio al cliente, siempre atentos y dispuestos a ayudar. ¡Totalmente satisfecho!`,
     },
     {
       id: 2,
-      name: "Jane Doe",
-      testimonial: `Solicité una asesoría para
-        vender mi vehículo y vendieron
-        mi auto en un excelente precio
-        y en un tiempo súper rápido`,
+      name: "Javiera Rodríguez",
+      testimonial: `Rápidos y eficientes, resolvieron mi problema en menos de 24 horas. Definitivamente los recomiendo.`,
     },
     {
       id: 3,
-      name: "Steve Smith",
-      testimonial:
-        "La calidad del producto es insuperable. Definitivamente recomendaría esto a mis amigos.",
+      name: "Renato Pizarro",
+      testimonial: `Los productos son de alta calidad y el envío fue muy rápido. Muy contento con la compra.`,
     },
     {
       id: 4,
-      name: "Sara Wilson",
-      testimonial:
-        "He usado este producto durante el último año, y ha sido fantástico en todo aspecto.",
-    },
-    // Asegúrate de que los ID sean únicos
-    {
-      id: 5,
-      name: "Alex Johnson",
-      testimonial:
-        "La atención al detalle en este producto es increíble. ¡Muy recomendado!",
+      name: "Daniela Espinoza",
+      testimonial: `Increíble experiencia de compra. Atención personalizada y muy profesional.`,
     },
     {
       id: 5,
-      name: "Alex Johnson",
-      testimonial:
-        "La atención al detalle en este producto es increíble. ¡Muy recomendado!",
+      name: "Nicolás Gómez",
+      testimonial: `El mejor servicio que he recibido en años. Amables y eficaces en todo momento.`,
     },
-
-    {
-      id: 5,
-      name: "Alex Johnson",
-      testimonial:
-        "La atención al detalle en este producto es increíble. ¡Muy recomendado!",
-    },
-
     {
       id: 6,
-      name: "Alex Johnson",
-      testimonial:
-        "La atención al detalle en este producto es increíble. ¡Muy recomendado!",
+      name: "Camila Vásquez",
+      testimonial: `Fascinada con el resultado, superaron mis expectativas con creces. ¡Gracias!`,
+    },
+    {
+      id: 7,
+      name: "Benjamín Orellana",
+      testimonial: `Precio y calidad insuperables. Siempre elijo esta marca por su confiabilidad.`,
+    },
+    {
+      id: 8,
+      name: "Sofía Muñoz",
+      testimonial: `Una atención excepcional, se tomaron el tiempo necesario para asegurarse que quedara completamente satisfecha.`,
     },
   ];
 
@@ -89,20 +70,23 @@ const TestimonialSwiper = () => {
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, Autoplay, Virtual]}
         spaceBetween={50}
-        slidesPerView={4} // Ajusta esto según tus necesidades de diseño responsivo
-        /*         pagination={{ clickable: true }}
-        navigation */
+        slidesPerView={4}
         autoplay={{
           delay: 2500,
         }}
         loop={true}
         className="mySwiper"
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 4 },
+        }}
       >
         {testimonials.map((testimonial) => {
           const key = uuidv4();
           return (
             <SwiperSlide key={key}>
-              <div className="flex flex-col items-center justify-center p-6 bg-white shadow-lg rounded-lg max-w-md">
+              <div className="flex flex-col items-center justify-center h-[200px] p-5 my-5 bg-white shadow-lg rounded-lg ">
                 <p className="text-gray-600 text-center">
                   {testimonial.testimonial}
                 </p>

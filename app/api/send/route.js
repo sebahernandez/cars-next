@@ -8,8 +8,8 @@ export async function POST(req) {
 
   try {
     const data = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
-      to: ["sebaprogramer@gmail.com"], // Asegúrate de enviar al email proporcionado en el formulario.
+      from: "Sitio web <onboarding@resend.dev>",
+      to: ["contacto@buycars.cl"], // Asegúrate de enviar al email proporcionado en el formulario.
       subject: subject,
       react: EmailTemplate({ firstName: name, message: message, email: email }), // Ajusta el componente EmailTemplate para aceptar y mostrar el mensaje.
     });

@@ -3,17 +3,26 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useCallback } from "react";
+import useWindowSize from "../hooks/ImageSide";
 
 export default function Slider() {
-  const [activeIndex, setActiveIndex] = useState(0); // Estado para rastrear el índice activo
-  const images = [
-    "/img/first.jpeg",
-    "/img/second.jpg",
-    "/img/third.jpg",
-    "/img/fourth.jpg",
-  ]; // Tus imágenes aquí
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  // Función para ir a la siguiente imagen
+  const { width } = useWindowSize();
+
+  const mobileImages = [
+    "/img/banner/mobile/movil-banner-1.webp",
+    "/img/banner/mobile/movil-banner-2.webp",
+    "/img/banner/mobile/movil-banner-3.webp",
+  ];
+
+  const desktopImages = [
+    "/img/banner/desktop/banner-desktop-1.webp",
+    "/img/banner/desktop/banner-desktop-2.webp",
+    "/img/banner/desktop/banner-desktop-3.webp",
+  ];
+
+  const images = width < 768 ? mobileImages : desktopImages;
 
   const nextSlide = useCallback(() => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -56,7 +65,7 @@ export default function Slider() {
                 src={src}
                 alt="Slide image"
                 fill={true}
-                priority={true}
+                priority={index === activeIndex}
                 style={{
                   objectFit: "cover",
                 }}

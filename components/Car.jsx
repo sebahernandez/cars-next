@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Cards = ({ product }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg my-10 mx-3">
+    <div className="flex flex-col  justify-around bg-white shadow-lg rounded-lg my-10 mx-3 h-[440px] ">
       <div className="relative">
         <div
           className="h-48 bg-gray-300 flex justify-center items-center bg-cover bg-center rounded"

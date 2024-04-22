@@ -29,7 +29,6 @@ export default function ContactForm() {
       }
 
       const result = await response.json();
-      console.log("Correo enviado con éxito:", result);
 
       formRef.current.reset();
     } catch (error) {
