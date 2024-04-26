@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="border-t border-gray-700 py-16 px-4 md:px-0 lg:px-0 container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0 flex items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+          <div className="mb-4 md:mb-0 flex items-center mx-4">
             <Image
               src="/img/buycars-logo-whiite.webp"
               alt="Buycars"
@@ -23,37 +23,28 @@ const Footer = () => {
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-white">Llámanos al:</p>
+                <p className="text-xl font-semibold text-white">Llámanos al:</p>
                 <a
                   href="tel:+990737621432"
-                  className="text-sm md:text-2xl text-cyan-300"
+                  className="text-sm md:text-[12px] text-cyan-300"
                 >
-                  +990-737 621 432
+                  +56 9 7742 5152
                 </a>
               </div>
             </div>
 
             <div className="flex items-center space-x-2">
-              <div
-                className="bg-cyan-200 rounded-full p-1 mb-4 flex flex-col items-center justify-center md:p-4 md:mb-4 md:flex md:items-center md:justify-center"
-                style={{ margin: "auto" }}
-              >
-                <Sms
-                  size="24"
-                  color="#000000"
-                  // Mohamed wish you a good day
-                />
+              <div className="bg-cyan-200 rounded-full p-1 mb-4 flex flex-col items-center justify-center md:p-4 md:mb-4 md:flex md:items-center md:justify-center">
+                <Sms size="24" color="#000000" />
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-white">
-                  Correo electrónico
-                </p>
+                <p className="text-xl font-semibold text-white">Email</p>
                 <a
                   href="tel:+990737621432"
-                  className="text-sm md:text-2xl text-cyan-300"
+                  className="text-sm md:text-xl text-cyan-300"
                 >
-                  ventas@buycars.cl
+                  contacto@buycars.cl
                 </a>
               </div>
             </div>
@@ -61,15 +52,15 @@ const Footer = () => {
 
           {/* Sección de enlaces */}
           <div className="flex space-x-4">
-            <a href="/advertise" className="text-sm hover:text-gray-300">
+            <div className="text-sm hover:text-gray-300 mx-2">
               <h3 className="text-sm font-semibold text-cyan-300">Horario:</h3>
               Lunes a Viernes 10:00 - 19:00 Hrs. <br /> Sábados de 10:00 - 14:00
               Hrs.
-            </a>
-            <a href="/sitemap" className="text-sm hover:text-gray-300">
+            </div>
+            <div className="text-sm hover:text-gray-300 mx-2">
               <h3 className="text-sm font-semibold text-cyan-300">Oficina:</h3>
               Av.Las Condes 10.465 of 202
-            </a>
+            </div>
           </div>
         </div>
 
@@ -78,7 +69,7 @@ const Footer = () => {
 
         {/* Sección de derechos de autor y enlaces sociales */}
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-xs mb-4 md:mb-0 ">
+          <p className="text-xs mb-4 md:mb-0 mx-3 ">
             Buycars@2024 todos los derechos reservados | Desarrollo por venpu.cl
           </p>
           <div className="flex space-x-4 ">

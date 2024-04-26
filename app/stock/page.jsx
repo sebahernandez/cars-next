@@ -85,7 +85,7 @@ const Page = () => {
   ].sort();
 
   return (
-    <div className="container mx-auto px-4 md:px-0 mt-[160px]">
+    <div className="md:container md:mx-auto px-1 md:px-0 md:mt-[100px]">
       <div className="mb-4">
         <h1 className="text-3xl font-bold text-gray-800">
           Nuestro Catálogo de autos
@@ -94,16 +94,16 @@ const Page = () => {
           Contamos con stock de vehículos de las mejores marcas
         </span>
       </div>
-      <div className="mb-2 flex justify-between">
+      <div className="flex flex-col md:flex-row mb-2 space-y-2 md:space-y-0">
         <input
           type="text"
           placeholder="Buscar un auto..."
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="border p-2 mr-2 w-full"
+          className="border p-2 flex-grow"
         />
         <select
           onChange={(e) => setSortOrder(e.target.value)}
-          className="border p-2 mr-2"
+          className="border p-2"
         >
           <option value="asc">Precio Menor</option>
           <option value="desc">Precio Mayor</option>
@@ -131,12 +131,12 @@ const Page = () => {
           />
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           {filteredCars.slice(0, visibleCars).map((car, index) => (
             <Car key={index} product={car} />
           ))}
           {visibleCars < filteredCars.length && (
-            <div className="flex justify-center items-center w-full my-6 col-start-2 col-end-4">
+            <div className="flex justify-center items-center w-full my-6 col-span-2 md:col-start-2 md:col-end-4">
               <button
                 onClick={loadMoreCars}
                 className="bg-cyan-200 text-black hover:bg-cyan-500 hover:text-white font-bold py-2 px-4 rounded"

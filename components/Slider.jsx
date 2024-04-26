@@ -46,13 +46,13 @@ export default function Slider() {
   }, [activeIndex, nextSlide]);
 
   return (
-    <div className="md:container md:mx-auto mt-36 mx-[20px]">
+    <div className="md:container md:mx-auto mt-30 mx-[20px]">
       <div
         id="animation-carousel"
         className="relative w-full"
         data-carousel="static"
       >
-        <div className="relative h-56 overflow-hidden rounded-lg md:h-[500px]">
+        <div className="relative h-56 overflow-hidden rounded-lg mt-[100px] md:h-[500px] md:mx-0 md:mt-[130px]">
           {images.map((src, index) => (
             <div
               key={src}
@@ -75,7 +75,7 @@ export default function Slider() {
         </div>
         <button
           type="button"
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-1 p-2 mx-5 text-white bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-1 p-2 mx-10 text-white bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
           onClick={prevSlide}
           aria-label="Previous slide"
         >
@@ -85,7 +85,7 @@ export default function Slider() {
         </button>
         <button
           type="button"
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-1 p-2 mx-5 text-white bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-1 p-2 mx-10 text-white bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
           onClick={nextSlide}
           aria-label="Next slide"
         >

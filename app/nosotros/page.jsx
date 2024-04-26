@@ -12,7 +12,7 @@ const page = () => {
   return (
     <div>
       <section
-        className="relative bg-cover bg-top h-600 text-white flex flex-col justify-center items-center"
+        className=" container mx-auto relative bg-cover bg-top h-600 text-white flex flex-col justify-center items-center"
         style={{
           backgroundImage: "url('/img/team/team-buycars.webp')",
           height: "600px",

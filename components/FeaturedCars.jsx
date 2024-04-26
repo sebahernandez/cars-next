@@ -65,7 +65,7 @@ function FeaturedCars() {
   }
 
   return (
-    <section className="my-28">
+    <section className="my-10">
       <div className="md:container md:mx-auto mx-[20px] ">
         <h2 className="text-2xl md:text-4xl font-bold ml-2">
           Vehículos Destacados

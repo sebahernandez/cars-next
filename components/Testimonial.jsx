@@ -16,6 +16,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/virtual";
+import { StarRating } from "./StarRating";
+import { Google } from "iconic-react";
 
 const TestimonialSwiper = () => {
   const testimonials = [
@@ -62,10 +64,11 @@ const TestimonialSwiper = () => {
   ];
 
   return (
-    <div className="container mx-auto py-5">
-      <h2 className="text-4xl font-bold">Lo que dicen nuestros clientes...</h2>
-      <p className="text-xl py-2 mb-5">
-        Se parte de nuestra comunidad y conviértete en un #Buycarslovers.
+    <div className="md:container md:mx-auto py-5 mx-5">
+      <h2 className="text-4xl font-bold mx-5 text-center">Testimonios</h2>
+      <p className="text-xl py-2 mb-5 mx-5 text-center">
+        Se parte de nuestra comunidad y conviértete en un{" "}
+        <strong>#Buycarslovers.</strong>
       </p>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, Autoplay, Virtual]}
@@ -87,12 +90,21 @@ const TestimonialSwiper = () => {
           return (
             <SwiperSlide key={key}>
               <div className="flex flex-col items-center justify-center h-[200px] p-5 my-5 bg-white shadow-lg rounded-lg ">
+                <div className="my-3">
+                  <Google
+                    size="32"
+                    color="#ff8a65"
+                    variant="Bold"
+                    // Mohamed wish you a good day
+                  />
+                </div>
                 <p className="text-gray-600 text-center">
                   {testimonial.testimonial}
                 </p>
                 <p className="text-gray-800 mt-4 font-semibold text-center">
                   {testimonial.name}
                 </p>
+                <StarRating rating={5} />
               </div>
             </SwiperSlide>
           );

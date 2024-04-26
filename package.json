@@ -12,6 +12,7 @@
     "@react-email/components": "^0.0.16",
     "@react-email/render": "^0.0.12",
     "dotenv": "^16.4.5",
+    "flowbite": "^2.3.0",
     "form-data": "^4.0.0",
     "iconic-react": "^0.5.0",
     "next": "14.1.3",

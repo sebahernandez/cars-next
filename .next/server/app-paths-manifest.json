@@ -1,10 +1,7 @@
 {
-  "/_not-found": "app/_not-found.js",
-  "/api/send/route": "app/api/send/route.js",
   "/contacto/page": "app/contacto/page.js",
-  "/cars/[id]/page": "app/cars/[id]/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js",
   "/stock/page": "app/stock/page.js",
+  "/cars/[id]/page": "app/cars/[id]/page.js",
+  "/page": "app/page.js",
   "/nosotros/page": "app/nosotros/page.js"
 }

@@ -21,7 +21,10 @@ export default function BrandCarousel() {
   ];
 
   return (
-    <div className="container mx-auto mb-28">
+    <div className="container mx-auto mb-8 md:mb-28 md:py-10">
+      <h1 className="text-center text-xl my-10 font-bold md:text-4xl">
+        Empresas Partner
+      </h1>
       <Swiper
         modules={[Autoplay]}
         spaceBetween={50}

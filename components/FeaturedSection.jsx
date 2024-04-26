@@ -20,10 +20,10 @@ const FeatureCard = ({ Icon, title, description }) => {
 
 const FeatureSection = () => {
   return (
-    <div className="md:container md:mx-auto bg-amber-50 p-12 md:p-12 rounded-xl my-28 mx-[20px]">
+    <div className="md:container md:mx-auto bg-amber-50 p-12 md:p-12 rounded-xl my-8 mx-[10px]">
       <div className="container mx-auto flex flex-col lg:flex-row items-center">
         <div className="flex-1">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
             ¿Por qué Buycars?
           </h2>
           <p className="text-gray-600 mt-4">
@@ -55,9 +55,9 @@ const FeatureSection = () => {
         </div>
         <div className="flex-1 mt-8 lg:mt-0 lg:ml-8">
           {/* Asumiendo que la imagen está en la carpeta public */}
-          <div className="relative w-full h-96 rounded-lg overflow-hidden">
+          <div className="relative w-full  rounded-lg overflow-hidden">
             <Image
-              src="/img/auto-llaves.png" // Cambia esto por la ruta real de tu imagen
+              src="/img/compra-auto.jpg" // Cambia esto por la ruta real de tu imagen
               alt="Featured Image"
               width={772}
               height={737}
