@@ -35,21 +35,20 @@ const FeatureSection = () => {
               Icon={IoShieldCheckmarkOutline}
               title="Compra Segura"
               description="Todo nuestro stock cuenta con información de
-              fuentes oficiales e inspección certificada"
+              fuentes oficiales, en Buycars puedes comprar tranquilo y seguro."
             />
 
             <FeatureCard
               Icon={IoCalendarNumberOutline}
-              title="Garantía de 90 días"
-              description="Puedes tener la tranquilidad que Buycars entrega a
-              todo su stock"
+              title="Atención Personalizada"
+              description="En Buycars nos enfocamos en dar una atención de calidad, atendiendo cada una de tus consultas
+              y asesorándote en cada paso de la compra de tu proximo vehículo."
             />
 
             <FeatureCard
               Icon={IoHandLeftOutline}
-              title="Sin complicaciones ni regateos"
-              description="Nos encargamos de entregar el mejor precio de
-              mercado, transparente y seguro."
+              title="Ejecutivos calificados"
+              description="Nos enfocamos en brindar una experiencia, en la cual te sentirás cómodo, sgeuro y acompañado en todos los procesos de tu compra"
             />
           </div>
         </div>

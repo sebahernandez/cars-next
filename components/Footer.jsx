@@ -26,7 +26,7 @@ const Footer = () => {
                 <p className="text-xl font-semibold text-white">Llámanos al:</p>
                 <a
                   href="tel:+990737621432"
-                  className="text-sm md:text-[12px] text-cyan-300"
+                  className="text-cyan-300 text-sm md:text-[15px] md:font-bold "
                 >
                   +56 9 7742 5152
                 </a>

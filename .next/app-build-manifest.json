@@ -1,38 +1,26 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/contacto/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/contacto/page.js"
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
     ],
     "/stock/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/stock/page.js"
     ],
-    "/cars/[id]/page": [
+    "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/cars/[id]/page.css",
-      "static/chunks/app/cars/[id]/page.js"
-    ],
-    "/nosotros/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/nosotros/page.css",
-      "static/chunks/app/nosotros/page.js"
+      "static/chunks/app/not-found.js"
     ]
   }
 }

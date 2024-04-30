@@ -67,9 +67,17 @@ const Page = () => {
       .filter((car) => (filterBrand ? car.brand === filterBrand : true));
 
     if (sortOrder === "desc") {
-      cars.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+      cars.sort((a, b) => {
+        const priceA = parseFloat(a.price.replace(/,/g, ""));
+        const priceB = parseFloat(b.price.replace(/,/g, ""));
+        return priceB - priceA; // Orden descendente
+      });
     } else {
-      cars.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+      cars.sort((a, b) => {
+        const priceA = parseFloat(a.price.replace(/,/g, ""));
+        const priceB = parseFloat(b.price.replace(/,/g, ""));
+        return priceA - priceB; // Orden ascendente
+      });
     }
 
     setFilteredCars(cars);

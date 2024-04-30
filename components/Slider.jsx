@@ -11,15 +11,15 @@ export default function Slider() {
   const { width } = useWindowSize();
 
   const mobileImages = [
-    "/img/banner/mobile/movil-banner-1.webp",
-    "/img/banner/mobile/movil-banner-2.webp",
-    "/img/banner/mobile/movil-banner-3.webp",
+    "/img/banner/mobile/movil-banner1.webp",
+    "/img/banner/mobile/movil-banner2.webp",
+    "/img/banner/mobile/movil-banner3.webp",
   ];
 
   const desktopImages = [
-    "/img/banner/desktop/banner-desktop-1.webp",
-    "/img/banner/desktop/banner-desktop-2.webp",
-    "/img/banner/desktop/banner-desktop-3.webp",
+    "/img/banner/desktop/banner1.webp",
+    "/img/banner/desktop/banner2.webp",
+    "/img/banner/desktop/banner3.webp",
   ];
 
   const images = width < 768 ? mobileImages : desktopImages;

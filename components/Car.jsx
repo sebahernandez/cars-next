@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { Driving, GasStation, Setting2 } from "iconic-react";
+import { formatCLP } from "@/utils/formatter";
 
 const Cards = ({ product }) => {
+  const precio = product.price.replace(/,/g, ".");
+
   return (
     <div className="flex flex-col h-{300px] justify-between md:justify-around bg-white shadow-lg rounded-lg my-10 mx-3 md:h-[400px] ">
       <div className="relative">
@@ -22,7 +25,7 @@ const Cards = ({ product }) => {
       <div className="p-4">
         <div className="flex flex-col md:flex-row md:justify-between items-baseline">
           <h3 className="text-sm md:text-lg font-bold text-gray-900">
-            <a href={`/cars/${product.id}`}>${product.price}</a>
+            <a href={`/cars/${product.id}`}>${precio}</a>
           </h3>
           {/* <span className="text-sm text-gray-500">{product.location}</span> */}
         </div>
