@@ -53,10 +53,9 @@ const FeatureSection = () => {
           </div>
         </div>
         <div className="flex-1 mt-8 lg:mt-0 lg:ml-8">
-          {/* Asumiendo que la imagen está en la carpeta public */}
           <div className="relative w-full  rounded-lg overflow-hidden">
             <Image
-              src="/img/compra-auto.jpg" // Cambia esto por la ruta real de tu imagen
+              src="/img/compra-auto.jpg"
               alt="Featured Image"
               width={772}
               height={737}

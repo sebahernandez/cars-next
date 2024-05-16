@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { Driving, GasStation, Setting2 } from "iconic-react";
-import { formatCLP } from "@/utils/formatter";
 
 const Cards = ({ product }) => {
   const precio = product.price.replace(/,/g, ".");
 
   return (
-    <div className="flex flex-col h-{300px] justify-between md:justify-around bg-white shadow-lg rounded-lg my-10 mx-3 md:h-[400px] ">
+    <div className="flex flex-col h-{300px] justify-between md:justify-around bg-white shadow-lg rounded-lg my-5 mx-3 md:h-[500px] lg:h-[400px] ">
       <div className="relative">
         <a href={`/cars/${product.id}`}>
           <div
@@ -34,24 +33,24 @@ const Cards = ({ product }) => {
             {product.name}
           </h4>
         </div>
-        <div className="flex items-start justify-start mt-4 text-[9px] md:flex-row md:justify-between md:items-center md:text-gray-600 md:text-sm border-t border-b border-gray-300">
+        <div className="flex items-start justify-between mt-4 text-[12px] md:flex-col  md:justify-between md:items-start lg:flex-row md:text-gray-600 md:text-sm border-t border-b border-gray-300">
           <span className="flex items-center gap-1 mt-2 mb-2">
-            <Driving size="22" color="#000000" />
+            <Driving size="18" color="#000000" />
             {product.miles} KM
           </span>
           <span className="flex items-center gap-1 mt-2 mb-2">
-            <GasStation size="22" color="#000000" />
+            <GasStation size="18" color="#000000" />
             {product.fuelType}
           </span>
           <span className="flex items-center gap-1 mt-2 mb-2">
-            <Setting2 size="22" color="#000000" />
+            <Setting2 size="18" color="#000000" />
             {product.transmission}
           </span>
         </div>
-        <div className="mt-4 flex justify-center md:justify-end">
+        <div className="mt-4 flex justify-end md:justify-end">
           <Link
             href={`/cars/${product.id}`}
-            className="text-white text-[13px] bg-slate-700 hover:bg-slate-900 font-medium rounded-full md:text-sm px-4 py-2 text-center"
+            className="text-white text-[13px] bg-slate-700 hover:bg-slate-900 font-medium rounded-sm md:text-sm px-4 py-2 text-center"
           >
             Ver detalles
           </Link>

@@ -93,7 +93,7 @@ const Page = () => {
   ].sort();
 
   return (
-    <div className="md:container md:mx-auto px-1 md:px-0 md:mt-[100px]">
+    <div className="mx-3 mt-[120px] md:container md:mx-auto px-1 md:px-0 md:mt-[120px]">
       <div className="mb-4">
         <h1 className="text-3xl font-bold text-gray-800">
           Nuestro Catálogo de autos
@@ -139,12 +139,12 @@ const Page = () => {
           />
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:gap-0">
           {filteredCars.slice(0, visibleCars).map((car, index) => (
             <Car key={index} product={car} />
           ))}
           {visibleCars < filteredCars.length && (
-            <div className="flex justify-center items-center w-full my-6 col-span-2 md:col-start-2 md:col-end-4">
+            <div className="flex justify-center items-center w-full my-6 sm:col-span-1 md:col-span-2 md:col-start-2 md:col-end-4">
               <button
                 onClick={loadMoreCars}
                 className="bg-cyan-200 text-black hover:bg-cyan-500 hover:text-white font-bold py-2 px-4 rounded"

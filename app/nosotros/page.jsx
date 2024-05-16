@@ -33,9 +33,8 @@ const page = () => {
       </section>
 
       <section className="container mx-auto px-4 mt-[100px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {/* Card 1 */}
-          <div className="flex flex-col items-center justify-center p-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* <div className="flex flex-col items-center justify-center p-4">
             <div className="relative h-32 w-32 rounded-full overflow-hidden">
               <Image
                 src="/img/team/miguel-catalan.webp"
@@ -45,8 +44,8 @@ const page = () => {
               />
             </div>
             <h2 className="text-lg font-bold my-2">Miguel Catalán</h2>
-          </div>
-          {/* Card 2 */}
+          </div> */}
+
           <div className="flex flex-col items-center justify-center p-4">
             <div className="relative h-32 w-32 rounded-full overflow-hidden">
               <Image
@@ -58,7 +57,7 @@ const page = () => {
             </div>
             <h2 className="text-lg font-bold my-2">Victor Jaque</h2>
           </div>
-          {/* Card 3 */}
+
           <div className="flex flex-col items-center justify-center p-4">
             <div className="relative h-32 w-32 rounded-full overflow-hidden">
               <Image
@@ -70,7 +69,7 @@ const page = () => {
             </div>
             <h2 className="text-lg font-bold my-2">Pablo Gonzalez</h2>
           </div>
-          {/* Card 4 */}
+
           <div className="flex flex-col items-center justify-center  p-4">
             <div className="relative h-32 w-32 rounded-full overflow-hidden  ">
               <Image

@@ -1,8 +1,9 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function ContactForm() {
-  const formRef = useRef(null); // Añade una referencia al formulario
+  const formRef = useRef(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -10,6 +11,7 @@ export default function ContactForm() {
     const contactData = {
       name: formData.get("name"),
       email: formData.get("email"),
+      tel: formData.get("tel"),
       subject: formData.get("subject"),
       message: formData.get("message"),
     };
@@ -28,8 +30,8 @@ export default function ContactForm() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const result = await response.json();
-
+      await response.json();
+      setIsSubmitted(true);
       formRef.current.reset();
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
@@ -40,7 +42,7 @@ export default function ContactForm() {
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="md:w-1/2 space-y-4 bg-gray-100 p-4 rounded-lg "
+        className="md:w-1/2 space-y-8 bg-gray-100 p-4 rounded-lg "
       >
         <div>
           <label
@@ -75,6 +77,21 @@ export default function ContactForm() {
             htmlFor="subject"
             className="block text-sm font-medium text-gray-700"
           >
+            Teléfono
+          </label>
+          <input
+            type="tel"
+            name="tel"
+            required
+            className="bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+        </div>
+
+        <div>
+          <label
+            htmlFor="subject"
+            className="block text-sm font-medium text-gray-700"
+          >
             Asunto
           </label>
           <input
@@ -104,6 +121,11 @@ export default function ContactForm() {
         >
           Enviar
         </button>
+        {isSubmitted && (
+          <div className="mt-3 text-sm font-medium text-green-600">
+            Mensaje enviado con éxito.
+          </div>
+        )}
       </form>
     </>
   );

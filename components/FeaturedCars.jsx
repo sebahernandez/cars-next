@@ -36,14 +36,14 @@ function FeaturedCars() {
         const r = await response.json();
         if (r.status) {
           setDestacados(r.data);
-          setIsLoading(false); // Desactivar el indicador de carga después de recibir los datos
+          setIsLoading(false);
         } else {
           console.log(r.error);
-          setIsLoading(false); // Desactivar el indicador de carga en caso de error
+          setIsLoading(false);
         }
       } catch (error) {
         console.error("Error al obtener los datos de la API:", error);
-        setIsLoading(false); // Desactivar el indicador de carga en caso de excepción
+        setIsLoading(false);
       }
     };
 
@@ -88,15 +88,15 @@ function FeaturedCars() {
             },
             640: {
               slidesPerView: 2,
-              spaceBetween: 30,
+              spaceBetween: 10,
             },
             768: {
               slidesPerView: 3,
-              spaceBetween: 40,
+              spaceBetween: 10,
             },
             1024: {
               slidesPerView: 4,
-              spaceBetween: 50,
+              spaceBetween: 10,
             },
           }}
         >

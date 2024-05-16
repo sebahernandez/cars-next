@@ -4,14 +4,19 @@ import { EmailTemplate } from "@/components/EmailTemplate";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
-  const { name, email, subject, message } = await req.json();
+  const { name, email, tel, subject, message } = await req.json();
 
   try {
     const data = await resend.emails.send({
-      from: "Sitio web <onboarding@resend.dev>",
+      from: "Sitio web Buycars <onboarding@resend.dev>",
       to: ["contacto@buycars.cl"], // Asegúrate de enviar al email proporcionado en el formulario.
       subject: subject,
-      react: EmailTemplate({ firstName: name, message: message, email: email }), // Ajusta el componente EmailTemplate para aceptar y mostrar el mensaje.
+      react: EmailTemplate({
+        firstName: name,
+        message: message,
+        email: email,
+        tel: tel,
+      }), // Ajusta el componente EmailTemplate para aceptar y mostrar el mensaje.
     });
 
     return new Response(JSON.stringify(data), {

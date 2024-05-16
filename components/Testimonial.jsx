@@ -64,7 +64,7 @@ const TestimonialSwiper = () => {
   ];
 
   return (
-    <div className="md:container md:mx-auto py-5 mx-5">
+    <div className="md:container md:mx-auto md:py-10 py-10 mx-5">
       <h2 className="text-4xl font-bold mx-5 text-center">Testimonios</h2>
       <p className="text-xl py-2 mb-5 mx-5 text-center">
         Se parte de nuestra comunidad y conviértete en un{" "}

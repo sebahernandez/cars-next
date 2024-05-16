@@ -16,17 +16,17 @@ const Footer = () => {
               className="logo"
             />
           </div>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-2 md:gap-8 mb-4 md:mb-0">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-2 md:gap-2 mb-4 md:mb-0">
             <div className="flex items-center space-x-2">
-              <div className="bg-cyan-200 rounded-full p-1 flex flex-col items-start justify-start md:p-4 md:mb-4 md:flex md:items-center md:justify-center">
-                <Call size="24" color="#000000" />
+              <div className="bg-cyan-200 rounded-full p-1 flex flex-col items-start justify-start md:p-1 md:mb-4 md:flex md:items-center md:justify-center">
+                <Call size="16" color="#000000" />
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-white">Llámanos al:</p>
+                <p className="text-sm font-semibold text-white">Llámanos al:</p>
                 <a
                   href="tel:+990737621432"
-                  className="text-cyan-300 text-sm md:text-[15px] md:font-bold "
+                  className="text-cyan-300 text-sm md:text-[12px] md:font-bold "
                 >
                   +56 9 7742 5152
                 </a>
@@ -34,15 +34,15 @@ const Footer = () => {
             </div>
 
             <div className="flex items-center space-x-2">
-              <div className="bg-cyan-200 rounded-full p-1 mb-4 flex flex-col items-center justify-center md:p-4 md:mb-4 md:flex md:items-center md:justify-center">
-                <Sms size="24" color="#000000" />
+              <div className="bg-cyan-200 rounded-full p-1 mb-4 flex flex-col items-center justify-center md:p-1 md:mb-4 md:flex md:items-center md:justify-center">
+                <Sms size="16" color="#000000" />
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-white">Email</p>
+                <p className="text-sm font-semibold text-white">Email</p>
                 <a
                   href="tel:+990737621432"
-                  className="text-sm md:text-xl text-cyan-300"
+                  className="text-cyan-300 text-sm md:text-[12px] md:font-bold"
                 >
                   contacto@buycars.cl
                 </a>
