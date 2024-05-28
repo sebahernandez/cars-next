@@ -11,6 +11,9 @@ export const metadata = {
     "Buycar - Especialistas en gestión de Ventas, Consignación y Compra de vehículos.",
   description:
     "Especialistas en gestión de Ventas, Consignación y Compra de vehículos.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
