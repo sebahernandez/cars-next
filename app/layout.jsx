@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title:
-    "Buycar - Especialistas en gestión de Ventas, Consignación y Compra de vehículos.",
+    "Buycars - Especialistas en gestión de Ventas, Consignación y Compra de vehículos.",
   description:
     "Especialistas en gestión de Ventas, Consignación y Compra de vehículos.",
   icons: {
