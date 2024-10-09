@@ -5,7 +5,7 @@ const Cards = ({ product }) => {
   const precio = product.price.replace(/,/g, ".");
 
   return (
-    <div className="flex flex-col justify-between md:justify-around bg-white shadow-lg  my-5 mx-3">
+    <div className="flex flex-col justify-between md:justify-around bg-white shadow-lg my-5 mx-3">
       <div className="relative">
         <a href={`/cars/${product.id}`}>
           <div
@@ -26,7 +26,6 @@ const Cards = ({ product }) => {
           <h3 className="text-sm md:text-lg font-bold text-gray-900">
             <a href={`/cars/${product.id}`}>${precio}</a>
           </h3>
-          {/* <span className="text-sm text-gray-500">{product.location}</span> */}
         </div>
         <div className="my-2 h-8">
           <h4 className="text-[9px] text-gray-800 md:text-md md:font-medium md:text-[12px]">
