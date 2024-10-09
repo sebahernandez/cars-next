@@ -5,11 +5,11 @@ const Cards = ({ product }) => {
   const precio = product.price.replace(/,/g, ".");
 
   return (
-    <div className="flex flex-col h-{300px] justify-between md:justify-around bg-white shadow-lg rounded-lg my-5 mx-3 md:h-[500px] lg:h-[400px] ">
+    <div className="flex flex-col justify-between md:justify-around bg-white shadow-lg  my-5 mx-3">
       <div className="relative">
         <a href={`/cars/${product.id}`}>
           <div
-            className="h-48 bg-gray-300 flex justify-center items-center bg-cover bg-center rounded"
+            className="h-48 bg-gray-300 flex justify-center items-center bg-cover bg-center rounded-t-md"
             style={{ backgroundImage: `url(${product.imageUrl})` }}
           ></div>
         </a>
@@ -28,7 +28,7 @@ const Cards = ({ product }) => {
           </h3>
           {/* <span className="text-sm text-gray-500">{product.location}</span> */}
         </div>
-        <div className="my-2">
+        <div className="my-2 h-8">
           <h4 className="text-[9px] text-gray-800 md:text-md md:font-medium md:text-[12px]">
             {product.name}
           </h4>
