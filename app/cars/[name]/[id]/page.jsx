@@ -23,32 +23,40 @@ import "swiper/css/scrollbar";
 
 const PageCars = ({ params }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
-  const [car, setCar] = useState({});
+  const [car, setCar] = useState({})
+  const { id } = params; 
+  const precio = car.price ? car.price.replace(/,/g, ".") : "";
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const token = `${process.env.NEXT_PUBLIC_TOKEN_KEY}`;
-        const url = "https://venpu.cl/api";
-        const response = await fetch(`${url}/cars/stock/${Number(params.id)}`, {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-        });
+    if (id) {
+      const fetchData = async () => {
+        try {
+          const token = `${process.env.NEXT_PUBLIC_TOKEN_KEY}`;
+          const url = "https://venpu.cl/api";
+          // Hacemos la solicitud utilizando el `id`
+          const response = await fetch(`${url}/cars/stock/${Number(id)}`, {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+          });
 
-        const r = await response.json();
-        if (r.status) setCar(r.data);
-        else console.log(r.error);
-      } catch (error) {
-        console.error("Error al obtener los datos de la API:", error);
-      }
-    };
+          const r = await response.json();
+          if (r.status) setCar(r.data);
+          else console.log(r.error);
+        } catch (error) {
+          console.error("Error al obtener los datos de la API:", error);
+        }
+      };
 
-    fetchData();
-  }, [params.id]);
+      fetchData();
+    }
+  }, [id]);
+
+  if (!car) {
+    return <p>Cargando vehículo...</p>; 
+  }
 
   return (
     <section className="md:container md:mx-auto mt-[120px] sm:mt-36">
@@ -64,7 +72,7 @@ const PageCars = ({ params }) => {
           <Swiper
             navigation
             modules={[Navigation, Pagination, Autoplay, FreeMode, Thumbs]}
-            className="h-96 w-full rounded-lg"
+            className="h-[500px] w-full rounded-lg"
             loop={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
             thumbs={{
@@ -135,7 +143,7 @@ const PageCars = ({ params }) => {
         <div className="col-span-2 md:col-span-2 lg:col-span-2 lg:row-span-3 ">
           <div className="py-5 flex flex-col items-center sm:items-end">
             <p className="text-xl sm:text-2xl lg:text-4xl font-bold my-2">
-              ${car.price}
+              ${precio}
             </p>
             <Link
               href="/"

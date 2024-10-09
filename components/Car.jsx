@@ -1,13 +1,24 @@
 import Link from "next/link";
 import { Driving, GasStation, Setting2 } from "iconic-react";
 
+
+const formatProductNameForUrl = (name) => {
+  return name
+    .toLowerCase()
+    .replace(/\s+/g, '-') 
+    .replace(/[^\w-]+/g, '');
+};
+
 const Cards = ({ product }) => {
   const precio = product.price.replace(/,/g, ".");
+
+  // Limpia el nombre del producto para la URL
+  const formattedName = formatProductNameForUrl(product.name);
 
   return (
     <div className="flex flex-col justify-between md:justify-around bg-white shadow-lg my-5 mx-3">
       <div className="relative">
-        <a href={`/cars/${product.id}`}>
+        <a  href={`/cars/${formattedName}/${product.id}`}>
           <div
             className="h-48 bg-gray-300 flex justify-center items-center bg-cover bg-center rounded-t-md"
             style={{ backgroundImage: `url(${product.imageUrl})` }}
@@ -24,7 +35,7 @@ const Cards = ({ product }) => {
       <div className="p-4">
         <div className="flex flex-col md:flex-row md:justify-between items-baseline">
           <h3 className="text-sm md:text-lg font-bold text-gray-900">
-            <a href={`/cars/${product.id}`}>${precio}</a>
+            <a href={`/cars/${formattedName}/${product.id}`}>${precio}</a>
           </h3>
         </div>
         <div className="my-2 h-8">
@@ -48,7 +59,7 @@ const Cards = ({ product }) => {
         </div>
         <div className="mt-4 flex justify-end md:justify-end">
           <Link
-            href={`/cars/${product.id}`}
+            href={`/cars/${formattedName}/${product.id}`}
             className="text-white text-[13px] bg-slate-700 hover:bg-slate-900 font-medium rounded-sm md:text-sm px-4 py-2 text-center"
           >
             Ver detalles
