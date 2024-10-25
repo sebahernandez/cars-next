@@ -2,7 +2,6 @@
 
 import PropTypes from "prop-types";
 import { useRef } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Map } from "iconic-react";
@@ -29,21 +28,6 @@ export default function PageCarsClient({ car }) {
 
   return (
     <>
-      <Head>
-        <title>{car.name} - Detalles del Vehículo</title>
-        <meta property="og:title" content={car.name} />
-        <meta property="og:description" content={car.description} />
-        <meta
-          property="og:image"
-          content={car.imageGallery?.[0]?.imageUrl || ""}
-        />
-        <meta
-          property="og:url"
-          content={`https://www.buycars.cl/cars/${car.id}`}
-        />
-        <meta property="og:type" content="website" />
-      </Head>
-
       <section className="md:container md:mx-auto mt-[120px] sm:mt-36">
         <div className="py-2 px-5 md:px-0">
           <h1 className="text-2xl sm:text-3xl font-bold mb-2">{car.name}</h1>
