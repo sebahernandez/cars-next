@@ -11,7 +11,7 @@ register();
 
 export default function Home() {
   return (
-    <div>
+    <div style={{ padding: "0px 20px 0px 20px" }}>
       <Slider />
       <FeaturedCars />
       <FeaturedSection />
