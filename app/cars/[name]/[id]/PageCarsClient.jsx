@@ -24,7 +24,7 @@ export default function PageCarsClient({ car }) {
   const precio = car.price ? car.price.replace(/,/g, ".") : "";
 
   if (!car) {
-    return <p>Cargando vehículo...</p>;
+    return <p>Cargando ficha vehículo...</p>;
   }
 
   return (
