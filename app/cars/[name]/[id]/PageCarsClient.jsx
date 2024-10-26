@@ -31,7 +31,7 @@ export default function PageCarsClient({ car }) {
           <Swiper
             navigation
             modules={[Navigation, Pagination, Autoplay, FreeMode, Thumbs]}
-            className="h-[600px] w-full rounded-lg"
+            className="h-[300px] md:h-[600px] w-full rounded-lg"
             loop={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
             thumbs={{
@@ -96,11 +96,13 @@ export default function PageCarsClient({ car }) {
           </Swiper>
         </div>
 
-        <div className="col-span-2 lg:col-start-3 border p-5 rounded-lg">
-          <table className="min-w-full table-auto">
+        <div className="col-span-2 lg:col-start-3 border p-5 rounded-lg md:mt-0 mt-5">
+          <table className="min-w-full table-auto ">
             <thead>
               <tr>
-                <th className="px-2 py-2">Información del Vehículo</th>
+                <th className="px-2 py-2 text-left hidden">
+                  Información del Vehículo
+                </th>
               </tr>
             </thead>
             <tbody>
