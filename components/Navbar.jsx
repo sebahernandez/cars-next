@@ -75,7 +75,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-20 py-3 md:py-0 bg-slate-900 dark:bg-gray-900 px-5 sm:px-1 ">
+    <nav className="fixed inset-x-0 top-0 z-20 py-3 md:py-0 bg-slate-900 dark:bg-gray-900 px-5 sm:px-1 px-10">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <a href="/" className="flex items-center">
           <Image
@@ -125,8 +125,8 @@ export const Navbar = () => {
             </svg>
           </button>
           <div
-            className={`md:relative flex-grow md:flex ${
-              isMobileMenuOpen ? "flex" : "hidden"
+            className={`md:relative flex-grow md:flex transition-all duration-300 ease-in-out ${
+              isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
             } absolute top-full bg-slate-900 py-5 px-5 right-0 flex-grow md:flex flex items-center justify-end`}
           >
             <ul className="flex flex-col mt-4 mx-2 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:items-center">
