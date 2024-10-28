@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { Call } from "iconic-react";
-import { Sms } from "iconic-react";
+import { Call, Sms } from "iconic-react";
 const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="border-t border-gray-700 py-16 px-4 md:px-0 lg:px-0 container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-10 px-3 md:px-10">
           <div className="mb-4 md:mb-0 flex items-center mx-4">
             <Image
               src="/img/buycars-logo-whiite.webp"
@@ -65,20 +64,13 @@ const Footer = () => {
         </div>
 
         {/* Línea divisoria */}
-        <div className="my-6 border-t border-gray-700"></div>
+        <div className="my-6 border-t border-gray-700 px-3 md:px-10"></div>
 
         {/* Sección de derechos de autor y enlaces sociales */}
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center">
           <p className="text-xs mb-4 md:mb-0 mx-3 ">
             Buycars@2024 todos los derechos reservados | Desarrollo por venpu.cl
           </p>
-          <div className="flex space-x-4 ">
-            {/* Iconos sociales */}
-            <a href="/facebook" className="icon-facebook-class"></a>
-            <a href="/twitter" className="icon-twitter-class"></a>
-            <a href="/linkedin" className="icon-linkedin-class"></a>
-            <a href="/instagram" className="icon-instagram-class"></a>
-          </div>
         </div>
       </div>
     </footer>

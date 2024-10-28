@@ -11,7 +11,7 @@ register();
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-2 md:px-10">
       <Slider />
       <FeaturedCars />
       <FeaturedSection />

@@ -49,11 +49,11 @@ export default function PageCarsClient({ car }) {
             {car.imageGallery &&
               Array.isArray(car.imageGallery) &&
               car.imageGallery.map((image) => (
-                <SwiperSlide key={car.id}>
+                <SwiperSlide key={image.id || image.imageUrl}>
                   <div className="flex h-full w-full items-center justify-center">
                     <Image
                       src={image.imageUrl}
-                      alt={image.name}
+                      alt={image.name || "Imagen de galería"}
                       className="block h-full w-full object-cover"
                       width={500}
                       height={500}
@@ -81,11 +81,11 @@ export default function PageCarsClient({ car }) {
             {car?.imageGallery &&
               Array.isArray(car.imageGallery) &&
               car.imageGallery.map((image) => (
-                <SwiperSlide key={car.id}>
+                <SwiperSlide key={image.id || image.imageUrl}>
                   <button className="h-full w-full">
                     <Image
                       src={image.imageUrl}
-                      alt={image.description}
+                      alt={image.name || "Imagen de galería"}
                       className="h-full w-full object-cover"
                       width={500}
                       height={700}

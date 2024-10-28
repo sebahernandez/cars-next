@@ -29,12 +29,14 @@ function DropdownCall() {
 
   return (
     <div className="relative" ref={ref}>
-      <div
+      <button
         className="bg-cyan-200 rounded-full flex items-center justify-center p-2 cursor-pointer"
         onClick={toggleDropdown}
+        tabIndex="0"
+        aria-label="Call Dropdown"
       >
         <Call size="24" color="#000000" />
-      </div>
+      </button>
 
       {isOpen && (
         <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-50">
@@ -75,8 +77,8 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-20 py-3 md:py-0 bg-slate-900 dark:bg-gray-900 px-5 sm:px-1 px-10">
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
+    <nav className="fixed inset-x-0 top-0 z-20 py-3 md:py-3 bg-slate-900 dark:bg-gray-900 px-5 sm:px-1 px-10">
+      <div className="container flex flex-wrap justify-between items-center mx-auto px-3 md:px-10">
         <a href="/" className="flex items-center">
           <Image
             src="/img/logo-buy-cars.webp"
@@ -86,9 +88,11 @@ export const Navbar = () => {
             priority
           />
         </a>
+
         {/* Botón para menú móvil */}
         <div className="flex items-center">
           <div className="md:hidden flex items-center space-x-2 mr-5">
+            {/* Iconos sociales visibles solo en móvil */}
             <div className="bg-cyan-200 rounded-full flex items-center justify-center p-2">
               <Link
                 href="https://web.facebook.com/buycars.chile?mibextid=LQQJ4d&rdid=wuIoHHMcbZcjkuew"
@@ -107,6 +111,8 @@ export const Navbar = () => {
             </div>
             <DropdownCall />
           </div>
+
+          {/* Botón hamburguesa para abrir menú móvil */}
           <button
             onClick={toggleMobileMenu}
             className="md:hidden text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded"
@@ -124,10 +130,12 @@ export const Navbar = () => {
               <rect y="60" width="100" height="15"></rect>
             </svg>
           </button>
+
+          {/* Menú de navegación común para desktop y móvil */}
           <div
-            className={`md:relative flex-grow md:flex transition-all duration-300 ease-in-out ${
+            className={`${
               isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-            } absolute top-full bg-slate-900 py-5 px-5 right-0 flex-grow md:flex flex items-center justify-end`}
+            } md:visible md:opacity-100 md:flex md:items-center md:space-x-8 absolute md:relative top-full right-0 bg-slate-900 py-5 px-5 md:py-0 md:px-0 md:bg-transparent transition-all duration-300 ease-in-out`}
           >
             <ul className="flex flex-col mt-4 mx-2 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:items-center">
               <li>
@@ -173,7 +181,8 @@ export const Navbar = () => {
               </li>
             </ul>
           </div>
-          {/* Iconos de redes sociales visibles en móvil y escritorio */}
+
+          {/* Iconos de redes sociales visibles solo en desktop */}
           <div className="hidden md:flex items-center space-x-2">
             <div className="bg-cyan-200 rounded-full flex items-center justify-center p-2">
               <Link
@@ -191,7 +200,6 @@ export const Navbar = () => {
                 <Instagram size="24" color="#000000" />
               </Link>
             </div>
-
             <DropdownCall />
           </div>
         </div>
