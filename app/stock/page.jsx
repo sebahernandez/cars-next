@@ -90,10 +90,10 @@ const Page = () => {
 
   const uniqueBrands = [
     ...new Set(stocks.map((product) => product.brand)),
-  ].sort();
+  ].sort((a, b) => a.localeCompare(b));
 
   return (
-    <div className="mx-3 mt-[120px] md:container md:mx-auto px-1 md:px-0 md:mt-[120px]">
+    <div className="mx-3 mt-[120px] md:container md:mx-auto px-1 md:px-0 md:mt-[120px] px-3 md:px-10">
       <div className="mb-4">
         <h1 className="text-3xl font-bold text-gray-800">
           Nuestro Catálogo de autos
@@ -121,8 +121,8 @@ const Page = () => {
           className="border p-2"
         >
           <option value="">Todas las Marcas</option>
-          {uniqueBrands.map((brand, index) => (
-            <option key={index} value={brand}>
+          {uniqueBrands.map((brand) => (
+            <option key={brand.name} value={brand}>
               {brand}
             </option>
           ))}
@@ -140,9 +140,10 @@ const Page = () => {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:gap-0">
-          {filteredCars.slice(0, visibleCars).map((car, index) => (
-            <Car key={index} product={car} />
-          ))}
+          {filteredCars?.length > 0 &&
+            filteredCars
+              .slice(0, visibleCars)
+              .map((car) => <Car key={car.id} product={car} />)}
           {visibleCars < filteredCars.length && (
             <div className="flex justify-center items-center w-full my-6 sm:col-span-1 md:col-span-2 md:col-start-2 md:col-end-4">
               <button
