@@ -125,8 +125,12 @@ export default function PageCarsClient({ car }) {
                     <span className="text-3xl lg:text-3xl font-bold py-2">
                       ${precio}
                     </span>
-                    <div className="w-max mb-4 text-white/90 text-center text-xs pl-2 pr-3 py-1.5 rounded-full bg-green-400 gap-1">
-                      {car.available ? "Disponible ✓ " : "No disponible"}
+                    <div
+                      className={`w-max mb-4 text-white/90 text-center text-xs pl-2 pr-3 py-1.5 rounded-full gap-1 ${
+                        car.available ? "bg-green-400" : "bg-red-400"
+                      }`}
+                    >
+                      {car.available ? "Disponible ✓" : "No disponible"}
                     </div>
                   </div>
                 </td>

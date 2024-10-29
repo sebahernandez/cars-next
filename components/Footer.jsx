@@ -3,8 +3,8 @@ import Image from "next/image";
 import { Call, Sms } from "iconic-react";
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="border-t border-gray-700 py-16 px-4 md:px-0 lg:px-0 container mx-auto">
+    <div className="footer bg-slate-900 text-white">
+      <div className=" border-gray-700 py-16 px-4 md:px-0 lg:px-0 container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-10 px-3 md:px-10">
           <div className="mb-4 md:mb-0 flex items-center mx-4">
             <Image
@@ -73,7 +73,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 

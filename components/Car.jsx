@@ -45,16 +45,17 @@ const Cards = ({ product }) => {
         </button>
       </div>
       <div className="p-4">
-        <div className="flex flex-col md:flex-row md:justify-between items-baseline">
-          <h3 className="text-xl md:text-2xl font-bold primary-color">
-            <a href={`/cars/${formattedName}/${product.id}`}>${precio}</a>
-          </h3>
-        </div>
-        <div className="my-2 h-8">
-          <h4 className="text-[9px] text-gray-800 md:text-md md:font-medium md:text-[12px]">
+        <div className="my-2 h-10">
+          <h4 className="text-[9px] text-slate-800 md:text-md md:font-medium md:text-[14px]">
             {product.name}
           </h4>
         </div>
+        <div className="flex flex-col md:flex-row md:justify-between items-baseline border border-slate-500 p-2 rounded-md bg-slate-100 ">
+          <h3 className="text-xl md:text-xl font-bold primary-color">
+            <a href={`/cars/${formattedName}/${product.id}`}>${precio}</a>
+          </h3>
+        </div>
+
         <div className="flex items-start justify-between mt-4 text-[12px] md:flex-col  md:justify-between md:items-start lg:flex-row md:text-gray-600 md:text-sm border-t border-b border-gray-300">
           <span className="flex items-center gap-1 mt-2 mb-2">
             <Driving size="18" color="#000000" />

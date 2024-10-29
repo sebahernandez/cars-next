@@ -119,3 +119,22 @@
   color: red;
   animation: blink 1.5s infinite ease-in-out;
 }
+
+/* footer */
+
+.footer {
+  position: relative;
+  background-color: #0f162a;
+  padding: 20px 0px;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0; /* Asegura que esté en la parte superior del footer */
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 50px 50px 0 50px; /* Controla el tamaño del triángulo */
+  border-color: #fff transparent transparent transparent; /* Color del triángulo */
+}
