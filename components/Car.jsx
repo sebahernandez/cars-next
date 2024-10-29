@@ -31,12 +31,22 @@ const Cards = ({ product }) => {
               : "bg-red-500 text-white"
           }`}
         >
-          {product.available ? "Disponible 🟢 " : "Vendido 🔴"}
+          <span>
+            {product.available ? (
+              <>
+                Disponible <span className="icon available-icon">🟢</span>
+              </>
+            ) : (
+              <>
+                Vendido <span className="icon sold-icon">🔴</span>
+              </>
+            )}
+          </span>
         </button>
       </div>
       <div className="p-4">
         <div className="flex flex-col md:flex-row md:justify-between items-baseline">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+          <h3 className="text-xl md:text-2xl font-bold primary-color">
             <a href={`/cars/${formattedName}/${product.id}`}>${precio}</a>
           </h3>
         </div>

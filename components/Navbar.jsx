@@ -176,7 +176,7 @@ export const Navbar = () => {
                   type="button"
                   className="py-2.5 px-5 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700"
                 >
-                  Vender mi auto
+                  Vender mi auto 🚗
                 </a>
               </li>
             </ul>

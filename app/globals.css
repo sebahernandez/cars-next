@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom styles */
+
+/* definir colores */
+
+:root {
+  --color-primary: #0f162a;
+  --color-secondary: #5de2e6;
+}
+
+.primary-color {
+  color: var(--color-primary);
+}
+
+.secondary-color {
+  color: var(--color-secondary);
+}
+
 .logo {
   width: 50px;
   height: 50px;
@@ -79,4 +96,26 @@
 
 #animation-carousel {
   width: 100%;
+}
+
+/* stock buttons */
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 2;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.available-icon {
+  color: limegreen;
+  animation: blink 1.5s infinite ease-in-out;
+}
+
+.sold-icon {
+  color: red;
+  animation: blink 1.5s infinite ease-in-out;
 }

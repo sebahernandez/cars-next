@@ -152,7 +152,7 @@ export default function PageCarsClient({ car }) {
           </table>
           <div className="my-5 flex">
             <Link
-              href="/"
+              href="/contacto"
               className="bg-black text-white rounded p-2 text-center w-full text-sm"
             >
               Reservar o agendar visita
