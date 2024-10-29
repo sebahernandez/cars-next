@@ -65,14 +65,14 @@ function FeaturedCars() {
   }
 
   return (
-    <section className="my-10">
+    <section className="my-20">
       <div className="md:container md:mx-auto mx-[20px] ">
         <h2 className="text-2xl md:text-4xl font-bold ml-2">
           Vehículos Destacados
         </h2>
 
         <small className="text-sm md:text-xl ml-2">
-          Encuentra el vehículo que buscas
+          Encuentra el vehículo que buscas...
         </small>
 
         <Swiper

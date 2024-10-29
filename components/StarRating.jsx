@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Star1 } from "iconic-react";
 
 export const StarRating = ({ rating }) => {
@@ -14,4 +15,7 @@ export const StarRating = ({ rating }) => {
       ))}
     </div>
   );
+};
+StarRating.propTypes = {
+  rating: PropTypes.number.isRequired,
 };

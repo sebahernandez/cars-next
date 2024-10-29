@@ -7,7 +7,6 @@ import {
   Navigation,
   Pagination,
   Scrollbar,
-  A11y,
   Autoplay,
   Virtual,
 } from "swiper/modules";
@@ -64,7 +63,7 @@ const TestimonialSwiper = () => {
   ];
 
   return (
-    <div className="md:container md:mx-auto md:py-10 py-10 mx-5">
+    <div className="md:container md:mx-auto md:py-10 py-20 mx-5">
       <h2 className="text-4xl font-bold mx-5 text-center">Testimonios</h2>
       <p className="text-xl py-2 mb-5 mx-5 text-center">
         Se parte de nuestra comunidad y conviértete en un{" "}
@@ -89,14 +88,9 @@ const TestimonialSwiper = () => {
           const key = uuidv4();
           return (
             <SwiperSlide key={key}>
-              <div className="flex flex-col items-center justify-center h-[200px] p-5 my-5 bg-white shadow-lg rounded-lg ">
+              <div className="flex flex-col items-center justify-center h-[300px] p-5 my-5 bg-white rounded-lg border-2 ">
                 <div className="my-3">
-                  <Google
-                    size="32"
-                    color="#ff8a65"
-                    variant="Bold"
-                    // Mohamed wish you a good day
-                  />
+                  <Google size="32" color="#ff8a65" variant="Bold" />
                 </div>
                 <p className="text-gray-600 text-center">
                   {testimonial.testimonial}
