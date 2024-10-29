@@ -25,7 +25,7 @@ export default function PageCarsClient({ car }) {
     return <p>Cargando ficha vehículo...</p>;
   }
   return (
-    <section className="md:container md:mx-auto mt-[120px] sm:mt-36">
+    <section className="md:container md:mx-auto mt-[120px] sm:mt-36 px-3 md:px-10">
       <div className="grid grid-cols-2 md:grid-cols-3 md:mx-0 md:gap-2 mx-5 my-5">
         <div className="col-span-2 md:col-span-2 lg:row-span-3 pr-0 md:pr-10">
           <Swiper
