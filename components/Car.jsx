@@ -70,10 +70,10 @@ const Cards = ({ product }) => {
             {product.transmission}
           </span>
         </div>
-        <div className="mt-4 flex justify-end md:justify-end">
+        <div className="mt-4 flex">
           <Link
             href={`/cars/${formattedName}/${product.id}`}
-            className="text-white text-[13px] bg-slate-700 hover:bg-slate-900 font-medium rounded-md md:text-sm px-4 py-2 text-center"
+            className="text-white text-[13px] bg-slate-800 hover:bg-slate-900 font-medium rounded-md md:text-sm px-4 py-2 text-center w-full"
           >
             Ver detalles
           </Link>
