@@ -80,7 +80,7 @@ const page = () => {
           <div className="flex flex-col items-center justify-center p-4">
             <div className="relative h-32 w-32 rounded-full overflow-hidden">
               <Image
-                src="/img/team/roberto-aguilera.webp"
+                src="/img/team/miguel-catalan.webp"
                 alt="Roberto Aguilera"
                 width={500}
                 height={500}
