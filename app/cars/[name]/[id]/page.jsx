@@ -1,4 +1,4 @@
-import PageCarsClient from "./PageCarsClient"; // Importamos el componente cliente
+import PageCarsClient from "@/components/PageCarsClient"; // Importamos el componente cliente
 import PropTypes from "prop-types";
 
 // Función para obtener los datos del vehículo desde la API
