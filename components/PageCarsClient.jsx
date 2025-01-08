@@ -13,8 +13,8 @@ import "swiper/css/zoom";
 export default function PageCarsClient({ car }) {
   const [isGalleryLoading, setIsGalleryLoading] = useState(true);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false); // Estado para el modal
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0); // Índice de la imagen activa
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   useEffect(() => {
     if (car?.imageGallery) {
@@ -32,7 +32,7 @@ export default function PageCarsClient({ car }) {
   }, [car.imageGallery]);
 
   const openModal = (index) => {
-    setActiveSlideIndex(index); // Establece la imagen activa
+    setActiveSlideIndex(index);
     setIsModalOpen(true);
   };
 
@@ -42,7 +42,7 @@ export default function PageCarsClient({ car }) {
 
   const handleModalClick = (event) => {
     if (event.target.id === "modal-overlay") {
-      closeModal(); // Cierra el modal si el clic ocurre fuera del contenido principal
+      closeModal();
     }
   };
 
@@ -78,14 +78,16 @@ export default function PageCarsClient({ car }) {
                   <SwiperSlide key={image.id ?? `${image.imageUrl}-${index}`}>
                     <div
                       className="flex h-full w-full items-center justify-center cursor-pointer"
-                      onClick={() => openModal(index)} // Abre el modal al hacer clic
+                      onClick={() => openModal(index)}
                     >
                       <Image
                         src={image.imageUrl}
                         alt={image.name || "Imagen de galería"}
-                        className="block h-full w-full object-cover"
                         width={800}
                         height={600}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority={index === 0}
+                        className="block w-full h-auto object-cover"
                       />
                     </div>
                   </SwiperSlide>
@@ -111,9 +113,10 @@ export default function PageCarsClient({ car }) {
                       <Image
                         src={image.imageUrl}
                         alt={image.name || "Imagen de galería"}
-                        className="h-full w-full object-cover"
                         width={500}
                         height={500}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="h-full w-full object-cover"
                       />
                     </button>
                   </SwiperSlide>
@@ -197,37 +200,46 @@ export default function PageCarsClient({ car }) {
       {isModalOpen && (
         <div
           id="modal-overlay"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
-          onClick={handleModalClick} // Cierra el modal si se hace clic fuera
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-85 p-4"
+          onClick={handleModalClick}
+          onTouchEnd={handleModalClick}
         >
-          <button
-            className="absolute top-4 right-4 text-white text-2xl"
-            onClick={closeModal}
+          <div
+            id="modal-content"
+            className="relative w-full max-w-md md:max-w-3xl h-auto max-h-[90vh]  rounded-lg overflow-hidden flex items-center justify-center"
+            onClick={(event) => event.stopPropagation()}
           >
-            ✕
-          </button>
-          <Swiper
-            modules={[Zoom, Navigation, Pagination]}
-            zoom={{ maxRatio: 3 }}
-            navigation
-            pagination={{ clickable: true }}
-            initialSlide={activeSlideIndex} // Empieza desde la imagen activa
-            className="w-full h-full md:w-3/4 md:h-3/4"
-          >
-            {car.imageGallery.map((image, index) => (
-              <SwiperSlide key={image.id ?? `${image.imageUrl}-modal-${index}`}>
-                <div className="swiper-zoom-container">
-                  <Image
-                    src={image.imageUrl}
-                    alt={image.name || "Imagen ampliada"}
-                    className="block w-full h-full object-cover"
-                    width={1200}
-                    height={800}
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+            <button
+              className="absolute top-4 right-4 bg-black text-white text-3xl p-2 rounded-full flex items-center justify-center w-12 h-12 z-50"
+              onClick={closeModal}
+            >
+              ✕
+            </button>
+            <Swiper
+              modules={[Zoom, Navigation, Pagination]}
+              zoom={{ maxRatio: 3 }}
+              navigation
+              initialSlide={activeSlideIndex}
+              className="w-full h-full"
+            >
+              {car.imageGallery.map((image, index) => (
+                <SwiperSlide
+                  key={image.id ?? `${image.imageUrl}-modal-${index}`}
+                >
+                  <div className="flex items-center justify-center h-[90vh] w-full">
+                    <Image
+                      src={image.imageUrl}
+                      alt={image.name || "Imagen ampliada"}
+                      width={1200}
+                      height={800}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="w-auto h-auto max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       )}
     </section>
