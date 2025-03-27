@@ -88,12 +88,16 @@ const Page = () => {
     setVisibleCars((prevVisibleCars) => prevVisibleCars + 8);
   };
 
-  const uniqueBrands = [
-    ...new Set(stocks.map((product) => product.brand)),
-  ].sort((a, b) => a.localeCompare(b));
+  const uniqueBrands = Array.from(
+    new Set(stocks.map((product) => product.brand))
+  ).sort((a, b) => {
+    if (a < b) return -1;
+    if (a > b) return 1;
+    return 0;
+  });
 
   return (
-    <div className="mx-3 mt-[120px] md:container md:mx-auto px-1 md:px-0 md:mt-[120px] px-3 md:px-10">
+    <div className="mx-3 mt-[120px] md:container md:mx-auto md:mt-[120px] px-3 md:px-10">
       <div className="mb-4">
         <h1 className="text-3xl font-bold text-gray-800">
           Nuestro Catálogo de autos
@@ -122,7 +126,7 @@ const Page = () => {
         >
           <option value="">Todas las Marcas</option>
           {uniqueBrands.map((brand) => (
-            <option key={brand.name} value={brand}>
+            <option key={brand} value={brand}>
               {brand}
             </option>
           ))}

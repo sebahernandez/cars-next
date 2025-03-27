@@ -17,7 +17,7 @@ const page = () => {
   return (
     <>
       <section
-        className="w-full h-[400px] h-[300px] md:h-[650px] relative text-white flex flex-col justify-center items-center py-20"
+        className="w-full h-[400px] md:h-[650px] relative text-white flex flex-col justify-center items-center py-20"
         style={backgroundStyle}
       >
         {/* Contenido centrado */}
@@ -39,7 +39,7 @@ const page = () => {
 
       <section className="container mx-auto flex justify-center items-center mt-0 md:mt-[50px] md:mb-[100px]">
         <div className=" w-full md:w-[900px] h-[300px] flex flex-col items-center justify-center rounded ">
-          <h1 className="md:text-5xl text-3xl md:text-6xl font-bold pt-20">
+          <h1 className="md:text-5xl text-3xl font-bold pt-20">
             Nuestro Equipo
           </h1>
           <p className="px-5 md:px-20 py-6 md:py-10 max-w-4xl mx-auto text-center">
